@@ -37,7 +37,7 @@ class m150520_153310_cms_alter_table__cms_site extends Migration
             'def'                   => "CHAR(1) NOT NULL DEFAULT 'N'",
             'priority'              => Schema::TYPE_INTEGER. "(11) NOT NULL DEFAULT '500'",
 
-            'code'                  => "CHAR(5) NOT NULL",
+            'code'                  => "CHAR(15) NOT NULL",
             'lang_code'             => "CHAR(5) NOT NULL",
 
             'name'                  => Schema::TYPE_STRING . '(255) NOT NULL',

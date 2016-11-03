@@ -13,7 +13,7 @@ class m150520_183310_alter_table__cms_tree extends Migration
     public function safeUp()
     {
 
-        $this->execute("ALTER TABLE {{%cms_tree%}} ADD `site_code` CHAR(5) NULL;");
+        $this->execute("ALTER TABLE {{%cms_tree%}} ADD `site_code` CHAR(15) NOT NULL;");
         $this->execute("ALTER TABLE {{%cms_tree}} ADD INDEX(site_code);");
 
         $this->addForeignKey(
@@ -22,7 +22,6 @@ class m150520_183310_alter_table__cms_tree extends Migration
         );
 
         $this->execute("UPDATE {{%cms_tree}}  SET `site_code` = 's1'");
-        $this->execute("ALTER TABLE {{%cms_tree}} CHANGE `site_code` `site_code` CHAR(5) NOT NULL;");
     }
 
     public function down()

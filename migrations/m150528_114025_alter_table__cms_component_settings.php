@@ -13,7 +13,7 @@ class m150528_114025_alter_table__cms_component_settings extends Migration
     public function safeUp()
     {
         //Возможны настройки для конкретного сайта
-        $this->execute("ALTER TABLE {{%cms_component_settings%}} ADD `site_code` CHAR(5) NULL;");
+        $this->execute("ALTER TABLE {{%cms_component_settings%}} ADD `site_code` CHAR(15) NULL;");
         $this->execute("ALTER TABLE {{%cms_component_settings}} ADD INDEX(site_code);");
 
         $this->addForeignKey(

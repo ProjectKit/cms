@@ -33,7 +33,7 @@ class m150520_173310_create_table__cms_site_domain extends Migration
             'created_at'            => Schema::TYPE_INTEGER . ' NULL',
             'updated_at'            => Schema::TYPE_INTEGER . ' NULL',
 
-            'site_code'             => "CHAR(5) NOT NULL",
+            'site_code'             => "CHAR(15) NOT NULL",
             'domain'                => Schema::TYPE_STRING . '(255) NOT NULL',
 
         ], $tableOptions);

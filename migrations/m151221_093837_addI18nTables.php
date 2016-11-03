@@ -10,7 +10,7 @@ class m151221_093837_addI18nTables extends Migration
      */
     public function safeUp()
     {
-        $i18n = new \skeeks\cms\i18n\components\I18NDb();
+        $i18n = Yii::$app->getI18n();
 
         if (!isset($i18n->sourceMessageTable) || !isset($i18n->messageTable)) {
             throw new InvalidConfigException('You should configure i18n component');

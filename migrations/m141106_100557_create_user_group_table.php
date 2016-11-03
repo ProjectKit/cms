@@ -102,7 +102,7 @@ class m141106_100557_create_user_group_table extends Migration
         );
 
 
-        $this->insert('{{%cms_user}}', [
+        /*$this->insert('{{%cms_user}}', [
             "username"              => "root",
             "name"                  => "Семенов Александр",
             "city"                  => "Зеленоград",
@@ -114,7 +114,7 @@ class m141106_100557_create_user_group_table extends Migration
             "role"                  => 10,
             "status"                => 10,
             "group_id"              => 1,
-        ]);
+        ]);*/
     }
 
     public function down()
